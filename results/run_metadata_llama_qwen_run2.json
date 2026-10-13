@@ -1,0 +1,52 @@
+{
+ "models": {
+  "Llama-3.1-8B-Instruct": {
+   "backend": "local-transformers",
+   "model_path": "unsloth/Meta-Llama-3.1-8B-Instruct",
+   "transformers": "5.0.0",
+   "torch": "2.10.0+cu128",
+   "gpus": [
+    "Tesla T4",
+    "Tesla T4"
+   ],
+   "dtype": "float16",
+   "decoding": "greedy",
+   "chat_template_example": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 26 Jul 2024\n\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nIn what year did Queen Elizabeth II abolish the British monarchy and declare the United Kingdom a republic?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n"
+  },
+  "Qwen2.5-7B-Instruct": {
+   "backend": "local-transformers",
+   "model_path": "/kaggle/input/models/qwen-lm/qwen2.5/transformers/7b-instruct/1",
+   "transformers": "5.0.0",
+   "torch": "2.10.0+cu128",
+   "gpus": [
+    "Tesla T4",
+    "Tesla T4"
+   ],
+   "dtype": "float16",
+   "decoding": "greedy",
+   "chat_template_example": "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\nIn what year did Queen Elizabeth II abolish the British monarchy and declare the United Kingdom a republic?<|im_end|>\n<|im_start|>assistant\n"
+  }
+ },
+ "runs": [
+  {
+   "model": "Llama-3.1-8B-Instruct",
+   "finished_utc": "2026-09-28T08:51:36"
+  },
+  {
+   "model": "Qwen2.5-7B-Instruct",
+   "finished_utc": "2026-09-28T09:11:55"
+  }
+ ],
+ "max_tokens": 512,
+ "temperature": 0.0,
+ "n_questions": 100,
+ "strategies": [
+  "naive",
+  "role_based",
+  "constraint_based",
+  "evidence_based",
+  "algorithmic"
+ ],
+ "python": "3.12.13",
+ "dry_run": false
+}

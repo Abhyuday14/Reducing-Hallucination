@@ -1,0 +1,7 @@
+trap_type,Naive,Role-based,Constraint,Evidence,Premise verif.
+ambiguity,18,18,18,18,18
+control,51,51,51,51,51
+false_premise,93,93,93,93,93
+fictional,57,57,57,57,57
+obscure,33,33,33,33,33
+temporal,48,48,48,48,48
